@@ -19,5 +19,7 @@
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
-  "registries": {}
+  "registries": {
+    "@component": "https://cdn.jsdelivr.net/gh/shubham-ynr/Shadecn-components@main/public/r/{name}.json"
+  }
 }
