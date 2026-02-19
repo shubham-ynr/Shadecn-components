@@ -15,9 +15,9 @@ A custom [shadcn/ui registry](https://ui.shadcn.com/docs/registry) for distribut
 Install any component in your shadcn-based project:
 
 ```bash
-npx shadcn@latest add https://raw.githubusercontent.com/shubham-ynr/Shadecn-components/main/public/r/data-table.json
-npx shadcn@latest add https://raw.githubusercontent.com/shubham-ynr/Shadecn-components/main/public/r/form-input.json
-npx shadcn@latest add https://raw.githubusercontent.com/shubham-ynr/Shadecn-components/main/public/r/form-textarea.json
+npx shadcn@latest add https://cdn.jsdelivr.net/gh/shubham-ynr/Shadecn-components@main/public/r/data-table.json
+npx shadcn@latest add https://cdn.jsdelivr.net/gh/shubham-ynr/Shadecn-components@main/public/r/form-input.json
+npx shadcn@latest add https://cdn.jsdelivr.net/gh/shubham-ynr/Shadecn-components@main/public/r/form-textarea.json
 ```
 
 ## Development
