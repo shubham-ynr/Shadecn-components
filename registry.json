@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "component",
-  "homepage": "https://component.example.com",
+  "homepage": "https://github.com/shubham-ynr/Shadecn-components",
   "items": [
     {
       "name": "data-table",

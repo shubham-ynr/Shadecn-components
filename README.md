@@ -15,13 +15,9 @@ A custom [shadcn/ui registry](https://ui.shadcn.com/docs/registry) for distribut
 Install any component in your shadcn-based project:
 
 ```bash
-# From production URL
-npx shadcn@latest add https://your-domain.com/r/data-table.json
-npx shadcn@latest add https://your-domain.com/r/form-input.json
-npx shadcn@latest add https://your-domain.com/r/form-textarea.json
-
-# From local dev server
-npx shadcn@latest add http://localhost:3000/r/data-table.json
+npx shadcn@latest add https://raw.githubusercontent.com/shubham-ynr/Shadecn-components/main/public/r/data-table.json
+npx shadcn@latest add https://raw.githubusercontent.com/shubham-ynr/Shadecn-components/main/public/r/form-input.json
+npx shadcn@latest add https://raw.githubusercontent.com/shubham-ynr/Shadecn-components/main/public/r/form-textarea.json
 ```
 
 ## Development
@@ -59,14 +55,6 @@ npm install
 ```bash
 npm run registry:build
 ```
-
-### Serving Locally
-
-```bash
-npm run dev
-```
-
-Components are served at `http://localhost:3000/r/<component-name>.json`.
 
 ### Project Structure
 
