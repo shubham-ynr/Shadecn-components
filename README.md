@@ -22,6 +22,9 @@ A custom [shadcn/ui registry](https://ui.shadcn.com/docs/registry) for distribut
 }
 ```
 
+> **Note:** If you encounter errors due to caching (e.g., changes not reflecting immediately), use the latest commit hash instead of `@main`:
+> `"@component": "https://cdn.jsdelivr.net/gh/shubham-ynr/Shadecn-components@c8f7ff7/public/r/{name}.json"`
+
 2. Install components easily:
 
 ```bash
