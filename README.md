@@ -2,6 +2,35 @@
 
 A custom [shadcn/ui registry](https://ui.shadcn.com/docs/registry) for distributing reusable components.
 
+## Quick Start (Two Ways)
+
+### Option A: Short Command (Recommended)
+
+Add this once to your `components.json` to enable short commands like `@component/data-table`:
+
+```json
+{
+  "registries": {
+    // TIP: Use specific commit hash to bypass caching if needed
+    "@component": "https://cdn.jsdelivr.net/gh/shubham-ynr/Shadecn-components@c8f7ff7/public/r/{name}.json"
+  }
+}
+```
+
+Then install easily:
+
+```bash
+npx shadcn@latest add @component/data-table
+```
+
+### Option B: Zero Config (Full URL)
+
+If you don't want to edit `components.json`, just use the full URL every time:
+
+```bash
+npx shadcn@latest add https://cdn.jsdelivr.net/gh/shubham-ynr/Shadecn-components@c8f7ff7/public/r/data-table.json
+```
+
 ## Components
 
 | Component         | Description                                                                                      |
