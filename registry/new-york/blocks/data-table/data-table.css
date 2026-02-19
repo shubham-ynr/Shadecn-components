@@ -28,6 +28,10 @@
   }
 }
 
+/* Hack to prevent "Leading decorators" error in parser */
+.fix-parser-error {
+}
+
 @layer utilities {
   .animate-progress-bar-1 {
     position: absolute;
