@@ -28,20 +28,22 @@
   }
 }
 
-@utility animate-progress-bar-1 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  will-change: left, right;
-  animation: progress-bar-1 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395)
-    infinite;
-}
+@layer utilities {
+  .animate-progress-bar-1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    will-change: left, right;
+    animation: progress-bar-1 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395)
+      infinite;
+  }
 
-@utility animate-progress-bar-2 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  will-change: left, right;
-  animation: progress-bar-2 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.15s
-    infinite;
+  .animate-progress-bar-2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    will-change: left, right;
+    animation: progress-bar-2 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.15s
+      infinite;
+  }
 }

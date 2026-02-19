@@ -37,9 +37,9 @@ npx shadcn@latest add @component/form-textarea
 If you prefer confusing one-off commands:
 
 ```bash
-npx shadcn@latest add https://cdn.jsdelivr.net/gh/shubham-ynr/Shadecn-components@main/public/r/data-table.json
-npx shadcn@latest add https://cdn.jsdelivr.net/gh/shubham-ynr/Shadecn-components@main/public/r/form-input.json
-npx shadcn@latest add https://cdn.jsdelivr.net/gh/shubham-ynr/Shadecn-components@main/public/r/form-textarea.json
+npx shadcn@latest add @component/data-table
+npx shadcn@latest add @component/form-input
+npx shadcn@latest add @component/form-textarea
 ```
 
 ## Development
