@@ -226,6 +226,26 @@ export default function DataTable({
         {/* Loading Bar Overlay */}
         {loading && (
           <div className="absolute top-0 left-0 right-0 h-[2px] z-10 overflow-hidden">
+            <style>{`
+              @keyframes progress-bar-1 {
+                0% { left: -100%; right: 100%; }
+                60% { left: 100%; right: -90%; }
+                100% { left: 100%; right: -90%; }
+              }
+              @keyframes progress-bar-2 {
+                0% { left: -136%; right: 100%; }
+                60% { left: 100%; right: -30%; }
+                100% { left: 100%; right: -30%; }
+              }
+              .animate-progress-bar-1 {
+                position: absolute; top: 0; bottom: 0; will-change: left, right;
+                animation: progress-bar-1 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+              }
+              .animate-progress-bar-2 {
+                position: absolute; top: 0; bottom: 0; will-change: left, right;
+                animation: progress-bar-2 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.15s infinite;
+              }
+            `}</style>
             <div className="bg-primary animate-progress-bar-1" />
             <div className="bg-primary animate-progress-bar-2" />
           </div>

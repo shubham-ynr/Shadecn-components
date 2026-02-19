@@ -19,10 +19,6 @@
         {
           "path": "registry/new-york/blocks/data-table/data-table.jsx",
           "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/data-table/data-table.css",
-          "type": "registry:component"
         }
       ]
     },
