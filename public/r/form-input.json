@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-input",
+  "title": "Form Input",
+  "description": "An enhanced input component with label, icon support, password toggle, number restrictions, and inline error display.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input-group",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/blocks/form-input/form-input.jsx",
+      "content": "\"use client\";\nimport { cn } from \"@/lib/utils\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@/components/ui/input-group\";\nimport { Label } from \"@/components/ui/label\";\nimport { Eye, EyeOff } from \"lucide-react\";\nimport { useState } from \"react\";\n\nexport default function FormInput({ ...props }) {\n  const {\n    type,\n    label,\n    htmlFor,\n    topRightItem,\n    icon,\n    iconRight,\n    maxLength,\n    onKeyDown,\n    onWheel,\n    onInput,\n    error,\n    className,\n  } = props;\n  const isPassword = type === \"password\";\n  const isNumber = type === \"number\";\n  const [isPasswordVisible, setIsPasswordVisible] = useState(false);\n  const inputType = isPassword\n    ? isPasswordVisible\n      ? \"text\"\n      : \"password\"\n    : type;\n\n  const handleKeyDown = (event) => {\n    if (isNumber && (event.key === \"ArrowUp\" || event.key === \"ArrowDown\")) {\n      event.preventDefault();\n    }\n    onKeyDown?.(event);\n  };\n\n  const handleWheel = (event) => {\n    if (isNumber) {\n      event.currentTarget.blur();\n    }\n    onWheel?.(event);\n  };\n\n  const handleInput = (event) => {\n    if (maxLength && isNumber) {\n      const value = event.currentTarget.value;\n      if (value.length > maxLength) {\n        event.currentTarget.value = value.slice(0, maxLength);\n      }\n    }\n    onInput?.(event);\n  };\n  return (\n    <div className={cn(\"grid gap-1.5\", className)}>\n      <div className=\"flex items-center justify-between\">\n        {label && <Label htmlFor={htmlFor}>{label}</Label>}\n        {topRightItem && topRightItem}\n      </div>\n      <div className=\"flex items-start flex-col\">\n        <InputGroup>\n          {icon && (\n            <InputGroupAddon align=\"inline-start\">{icon}</InputGroupAddon>\n          )}\n          <InputGroupInput\n            {...props}\n            type={inputType}\n            maxLength={maxLength}\n            onKeyDown={handleKeyDown}\n            onWheel={handleWheel}\n            onInput={handleInput}\n            aria-invalid={!!error}\n          />\n          {(iconRight || isPassword) && (\n            <InputGroupAddon align=\"inline-end\">\n              <div className=\"flex items-center gap-1\">\n                {iconRight ? (\n                  iconRight\n                ) : (\n                  <InputGroupButton\n                    type=\"button\"\n                    variant=\"ghost\"\n                    size=\"icon-xs\"\n                    onClick={() => setIsPasswordVisible((prev) => !prev)}\n                    aria-label={\n                      isPasswordVisible ? \"Hide password\" : \"Show password\"\n                    }\n                  >\n                    {isPasswordVisible ? (\n                      <EyeOff className=\"size-4\" />\n                    ) : (\n                      <Eye className=\"size-4\" />\n                    )}\n                  </InputGroupButton>\n                )}\n              </div>\n            </InputGroupAddon>\n          )}\n        </InputGroup>\n        <div className=\"min-h-6 text-destructive text-xs flex items-center\">\n          {error?.message ?? (typeof error === \"string\" ? error : null)}\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "component",
+  "homepage": "https://component.example.com",
+  "items": [
+    {
+      "name": "data-table",
+      "type": "registry:component",
+      "title": "Data Table",
+      "description": "A dynamic, server-side paginated data table with search, sorting, selection, and loading states.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "table",
+        "select",
+        "checkbox",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/data-table/data-table.jsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/data-table/data-table.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "form-input",
+      "type": "registry:component",
+      "title": "Form Input",
+      "description": "An enhanced input component with label, icon support, password toggle, number restrictions, and inline error display.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "input-group",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/form-input/form-input.jsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "form-textarea",
+      "type": "registry:component",
+      "title": "Form Textarea",
+      "description": "An enhanced textarea component with label, icon support, and inline error display.",
+      "registryDependencies": [
+        "input-group",
+        "textarea",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/form-textarea/form-textarea.jsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
